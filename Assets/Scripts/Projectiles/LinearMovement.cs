@@ -20,6 +20,12 @@ public class LinearMovement : MonoBehaviour {
 	[SerializeField]
 	float offX, offY, delay;
 	void Start () {
+
+		if (origen == null) {
+			origen = gameObject.transform;
+		}
+		origenFix.x = origen.transform.position.x; origenFix.y = origen.transform.position.y;
+
 		isOverX = false; isOverY = false;
 		backTrackCon = 1;
 		delay = 99;

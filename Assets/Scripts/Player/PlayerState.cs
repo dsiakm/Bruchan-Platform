@@ -138,9 +138,9 @@ public class PlayerState : MonoBehaviour {
 	float wallTimeMin, dashTimeMin;
 	//Default Values for movement
 	const float desacelerationDEFAULT = 0.95f, 
-				moveSpeedDEFAULT = 16f, 
-				jumpForceDEFAULT = 10, 
-				jumpExtraForceDEFAULT = 16, 
+				moveSpeedDEFAULT = 10f, 
+				jumpForceDEFAULT = 8, 
+				jumpExtraForceDEFAULT = 8, 
 				jumpExtraTimeDEFAULT = 0.3f, 
 				runningSpeedDEFAULT = 8, 
 				dashSpeedDEFAULT = 32, 

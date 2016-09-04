@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
 
 	//Internal Control
+	[SerializeField]
 	bool isOnGround, canDash, isOnWallControl, jumpAgain, isRunning, isHitJumping;
 	bool isOnWall{
 		get{
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour {
 			}
 			return true;
 		}
+		dashTimer = 99;
 		return false;
 	}
 
@@ -72,8 +74,17 @@ public class PlayerMovement : MonoBehaviour {
 			rb2d.velocity = new Vector2(rb2d.velocity.x,PlayerState.playerState.JumpForce);
 			jumpAgain = false;
 			timer = 0;
-		}else if(jump && !isOnGround && isOnWall){
-			rb2d.velocity = new Vector2(PlayerState.playerState.JumpForce*-PlayerState.playerState.Facing,PlayerState.playerState.JumpForce);
+		}else if(jump && isOnWall){
+			float horizontal = Input.GetAxis ("Horizontal");
+			if (horizontal == 0)
+				rb2d.velocity = new Vector2 (PlayerState.playerState.JumpForce, PlayerState.playerState.JumpForce);
+			else {
+				if (horizontal < 0)
+					horizontal = -1;
+				else
+					horizontal = 1;
+				rb2d.velocity = new Vector2(PlayerState.playerState.JumpForce*-horizontal,PlayerState.playerState.JumpForce);
+			}
 			wallTimer = 0;
 			timer = 0;
 		}

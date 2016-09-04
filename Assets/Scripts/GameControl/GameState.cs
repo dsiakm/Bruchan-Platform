@@ -27,6 +27,11 @@ public class GameState : MonoBehaviour {
 		SetAllWeapons ();
 		SetAllSpells ();
 		SetAllItems ();
+
+		weaponsUnlockedList.Add ("basicWeapon");
+		spellsUnlockedList.Add ("basicSpell");
+		spellsUnlockedList.Add ("SludgeSpell");
+		itemsUnlockedList.Add ("basicItem");
 	}
 
 	public void Save(){
@@ -107,7 +112,8 @@ public class GameState : MonoBehaviour {
 		return weaponsUnlockedList[index];
 	}
 	public string CicleUnlockedSpells(int side){
-		int index = spellsUnlockedList.IndexOf (PlayerState.playerState.GetActiveSpell())+side;
+		Debug.Log (spellsUnlockedList.Count);
+		int index = spellsUnlockedList.IndexOf(PlayerState.playerState.GetActiveSpell())+side;
 		if (index < 0){
 			index = spellsUnlockedList.Count - 1;
 		}else if (index > spellsUnlockedList.Count - 1){
@@ -116,7 +122,7 @@ public class GameState : MonoBehaviour {
 		return spellsUnlockedList[index];
 	}
 	public string CicleUnlockedItems(int side){
-		int index = itemsUnlockedList.IndexOf (PlayerState.playerState.GetActiveItem())+side;
+		int index = itemsUnlockedList.IndexOf (PlayerState.playerState.GetActiveItem()+side);
 		if (index < 0){
 			index = itemsUnlockedList.Count - 1;
 		}else if (index > itemsUnlockedList.Count - 1){

@@ -50,7 +50,7 @@ public class CircularMovement : MonoBehaviour {
 		if (backTrack) {
 			if(backTrackCon==1){
 				time += Time.deltaTime * spinningSpeed;
-				if (time > spinningRange) {
+				if (time > spinningRange+inicialAngle) {
 					backTrackCon = 2;
 				} 
 			}else if(backTrackCon==2) {

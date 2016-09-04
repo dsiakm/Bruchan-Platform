@@ -45,16 +45,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyCollision.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyFollowHero.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyKeepAway.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyShot.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyState.cs" />
+     <Compile Include="Assets\Scripts\GUI\CameraFocus.cs" />
      <Compile Include="Assets\Scripts\GameControl\Damage.cs" />
      <Compile Include="Assets\Scripts\GameControl\GameState.cs" />
      <Compile Include="Assets\Scripts\GameControl\MovementModifier.cs" />
+     <Compile Include="Assets\Scripts\GameControl\Platform.cs" />
      <Compile Include="Assets\Scripts\GameControl\StaticTerrain.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerState.cs" />
      <Compile Include="Assets\Scripts\Projectiles\CircularMovement.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\EnemyBulletBehaviour.cs" />
      <Compile Include="Assets\Scripts\Projectiles\LinearMovement.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\SludgePoolBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\SlugdeSpawnBehaviour.cs" />
      <Compile Include="Assets\Scripts\Projectiles\basicSpellBehaviour.cs" />
      <Compile Include="Assets\Scripts\Projectiles\basicWeaponBehaviour.cs" />
  <Reference Include="UnityEngine.UI">
