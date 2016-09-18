@@ -3,7 +3,7 @@ using System.Collections;
 
 public class StaticTerrain : MonoBehaviour {
 
-	public bool isGround, isWall;
+	public bool isGround, isWall, isRoof;
 
 	MovementModifier mm;
 

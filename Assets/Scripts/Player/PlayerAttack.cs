@@ -17,7 +17,8 @@ public class PlayerAttack : MonoBehaviour {
 	}
 
 	void RangedAttack(){
-		if (Input.GetButtonDown("Fire2")){
+		if (Input.GetButtonDown("Fire2") && PlayerState.playerState.currentSP >= 6){
+			PlayerState.playerState.currentSP -= 6;
 			Instantiate (Resources.Load("ProjectilesPlayer/"+PlayerState.playerState.GetActiveSpell()) as GameObject, gameObject.transform.position, Quaternion.identity);
 		}
 	}
@@ -33,6 +34,6 @@ public class PlayerAttack : MonoBehaviour {
 	}
 
 	void RecoverSP(){
-		PlayerState.playerState.SetSP (-1*Time.deltaTime);
+		PlayerState.playerState.SetSP (-3*Time.deltaTime);
 	}
 }

@@ -5,6 +5,7 @@ public class EnemyFollowHero : MonoBehaviour {
 
 	Rigidbody2D rb2d;
 	Transform playerTransform;
+	public bool isFlying;
 	public float minimumDistance;
 	public float boundLeft, boundRight;
 	public float speed;
@@ -18,10 +19,18 @@ public class EnemyFollowHero : MonoBehaviour {
 	void Update () {
 		//Return Update in case is too far away
 		float temp;
-		if (rb2d.position.x < playerTransform.position.x) {
-			temp = playerTransform.position.x - rb2d.position.x;
-		} else if (rb2d.position.x >= playerTransform.position.x) {
-			temp = rb2d.position.x - playerTransform.position.x;
+		if (transform.position.x < playerTransform.position.x) {
+			temp = playerTransform.position.x - transform.position.x;
+		} else if (transform.position.x >= playerTransform.position.x) {
+			temp = transform.position.x - playerTransform.position.x;
+		} else
+			temp = 0;
+		if (temp > minimumDistance)
+			return;
+		if (transform.position.y < playerTransform.position.y) {
+			temp = playerTransform.position.y - transform.position.y;
+		} else if (transform.position.y >= playerTransform.position.y) {
+			temp = transform.position.y - playerTransform.position.y;
 		} else
 			temp = 0;
 		if (temp > minimumDistance)
@@ -41,6 +50,13 @@ public class EnemyFollowHero : MonoBehaviour {
 			rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
 		} else if (rb2d.position.x > playerTransform.position.x + 1) {
 			rb2d.velocity = new Vector2 (-speed, rb2d.velocity.y);
+		}
+		if (isFlying){
+			if (rb2d.position.y < playerTransform.position.y - 3) {
+				rb2d.velocity = new Vector2 (rb2d.velocity.x, speed);
+			} else if (rb2d.position.y > playerTransform.position.y + 3) {
+				rb2d.velocity = new Vector2 (rb2d.velocity.x, -speed);
+			}
 		}
 	}
 }

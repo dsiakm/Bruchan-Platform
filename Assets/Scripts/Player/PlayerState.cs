@@ -78,14 +78,14 @@ public class PlayerState : MonoBehaviour {
 	}
 
 	//HP control section
-	float baseHP, modHP, currentHP, baseSP, modSP, currentSP;
-	float maxHP{
+	public float baseHP, modHP, currentHP, baseSP, modSP, currentSP;
+	public float maxHP{
 		get{ return baseHP + modHP; }
 	}
-	float maxSP{
+	public float maxSP{
 		get { return baseSP + modSP; }
 	}
-	bool isDead{
+	public bool isDead{
 		get{ 
 			if (currentHP < 0) {
 				return true;

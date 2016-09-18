@@ -52,7 +52,10 @@
      <Compile Include="Assets\Scripts\Enemies\EnemyShot.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyState.cs" />
      <Compile Include="Assets\Scripts\GUI\CameraFocus.cs" />
+     <Compile Include="Assets\Scripts\GUI\HPBar.cs" />
+     <Compile Include="Assets\Scripts\GUI\SPBar.cs" />
      <Compile Include="Assets\Scripts\GameControl\Damage.cs" />
+     <Compile Include="Assets\Scripts\GameControl\FaultyTerrain.cs" />
      <Compile Include="Assets\Scripts\GameControl\GameState.cs" />
      <Compile Include="Assets\Scripts\GameControl\MovementModifier.cs" />
      <Compile Include="Assets\Scripts\GameControl\Platform.cs" />
@@ -60,7 +63,9 @@
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovementImproved.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerState.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\BlazeMovement.cs" />
      <Compile Include="Assets\Scripts\Projectiles\CircularMovement.cs" />
      <Compile Include="Assets\Scripts\Projectiles\EnemyBulletBehaviour.cs" />
      <Compile Include="Assets\Scripts\Projectiles\LinearMovement.cs" />

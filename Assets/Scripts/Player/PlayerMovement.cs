@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour {
 		}else if(jump && isOnWall){
 			float horizontal = Input.GetAxis ("Horizontal");
 			if (horizontal == 0)
-				rb2d.velocity = new Vector2 (PlayerState.playerState.JumpForce, PlayerState.playerState.JumpForce);
+				rb2d.velocity = new Vector2 (PlayerState.playerState.JumpForce*PlayerState.playerState.Facing, PlayerState.playerState.JumpForce);
 			else {
 				if (horizontal < 0)
 					horizontal = -1;

@@ -1,13 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemies/EnemyState.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerMovementImproved.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemies/EnemyFollowHero.cs" Line="34" Column="70" />
-      <File FileName="Assets/Scripts/Enemies/EnemyShot.cs" Line="12" Column="55" />
-      <File FileName="Assets/Scripts/Player/PlayerAttack.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Projectiles/EnemyBulletBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerMovementImproved.cs" Line="77" Column="56" />
+      <File FileName="Assets/Scripts/Player/PlayerMovement.cs" Line="6" Column="1" />
       <File FileName="Assets/Scripts/Player/PlayerCollision.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/EnemyState.cs" Line="58" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
