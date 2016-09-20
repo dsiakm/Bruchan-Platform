@@ -3,7 +3,8 @@ using System.Collections;
 
 public class basicSpellBehaviour : MonoBehaviour {
 
-
+	public float maxDistance;
+	public float speed;
 	LinearMovement lm;
 	int facing;
 
@@ -18,13 +19,15 @@ public class basicSpellBehaviour : MonoBehaviour {
 
 		lm.SetOrigen (PlayerState.playerState.gameObject.transform);
 		if (facing == 1)
-			lm.maxRangeX = 6;
+			lm.maxRangeX = maxDistance;
 		else if (facing == -1)
-			lm.minRangeX = -6;
+			lm.minRangeX = -maxDistance;
 		else if (facing == 2)
-			lm.maxRangeY = 6;
+			lm.maxRangeY = maxDistance;
 		else if (facing == -2)
-			lm.maxRangeY = -6;
+			lm.maxRangeY = -maxDistance;
+
+		lm.speedX = speed; lm.speedBX = speed;
 
 	}
 	

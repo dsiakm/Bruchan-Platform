@@ -13,7 +13,7 @@ public class EnemyBulletBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = Vector2.MoveTowards ( transform.position, destiny, speed);
+		transform.position = Vector2.MoveTowards ( transform.position, destiny, speed*Time.deltaTime);
 		if (transform.position.x == destiny.x && transform.position.y == destiny.y){
 			Destroy (gameObject);
 		}

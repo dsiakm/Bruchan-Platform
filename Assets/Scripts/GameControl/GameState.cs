@@ -30,7 +30,6 @@ public class GameState : MonoBehaviour {
 
 		weaponsUnlockedList.Add ("basicWeapon");
 		spellsUnlockedList.Add ("basicSpell");
-		spellsUnlockedList.Add ("SludgeSpell");
 		itemsUnlockedList.Add ("basicItem");
 	}
 

@@ -27,9 +27,6 @@ public class CameraFollow : MonoBehaviour {
 		if(cam.orthographicSize < 0.1f){
 			cam.orthographicSize = 0.1f;
 		}
-		if(cam.orthographicSize > 15f){
-			cam.orthographicSize = 15f;
-		}
 	}
 
 	void LateUpdate(){
