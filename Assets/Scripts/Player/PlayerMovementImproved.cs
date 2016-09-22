@@ -6,7 +6,7 @@ public class PlayerMovementImproved : MonoBehaviour {
 	//NEW//
 	bool isOnGround(){
 
-		float lengthToSearch = 0.1f;
+		float lengthToSearch = 1f;
 		float colliderThreshold = 0.001f;
 		Renderer renderer = GetComponent<Renderer> ();
 
@@ -21,7 +21,7 @@ public class PlayerMovementImproved : MonoBehaviour {
 	}
 	bool isWallOnLeft(){
 
-		float lengthToSearch = 0.1f;
+		float lengthToSearch = 1f;
 		float colliderThreshold = 0.01f;
 		Renderer renderer = GetComponent<Renderer> ();
 		 
@@ -34,7 +34,7 @@ public class PlayerMovementImproved : MonoBehaviour {
 	}
 	bool isWallOnRight(){
 
-		float lengthToSearch = 0.1f;
+		float lengthToSearch = 0.5f;
 		float colliderThreshold = 0.01f;
 		Renderer renderer = GetComponent<Renderer> ();
 
@@ -156,7 +156,7 @@ public class PlayerMovementImproved : MonoBehaviour {
 		}
 
 		if( isWallOnLeft() || isWallOnRight() ){
-			rb2d.velocity = new Vector2 (rb2d.velocity.x/2, PlayerState.playerState.WallGrav);
+			rb2d.velocity = new Vector2 (rb2d.velocity.x, PlayerState.playerState.WallGrav);
 		}
 	}
 

@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\GameControl\GameState.cs" />
      <Compile Include="Assets\Scripts\GameControl\MovementModifier.cs" />
      <Compile Include="Assets\Scripts\GameControl\Platform.cs" />
+     <Compile Include="Assets\Scripts\GameControl\StageState.cs" />
      <Compile Include="Assets\Scripts\GameControl\StaticTerrain.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />

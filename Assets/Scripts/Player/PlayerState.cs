@@ -100,7 +100,7 @@ public class PlayerState : MonoBehaviour {
 		damage *= DefineElementalMod (element);
 		currentHP -= damage;
 		if (isDead) {
-			//tell game stage
+			StageState.stageState.PlayerDied ();
 		} else if (currentHP > maxHP)
 			currentHP = maxHP;
 	}
