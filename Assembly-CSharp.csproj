@@ -62,7 +62,9 @@
      <Compile Include="Assets\Scripts\GameControl\Platform.cs" />
      <Compile Include="Assets\Scripts\GameControl\StageState.cs" />
      <Compile Include="Assets\Scripts\GameControl\StaticTerrain.cs" />
+     <Compile Include="Assets\Scripts\GameWorld\CheckPoint.cs" />
      <Compile Include="Assets\Scripts\GameWorld\Consumable.cs" />
+     <Compile Include="Assets\Scripts\GameWorld\DestroyIfPastCheckPoint.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />

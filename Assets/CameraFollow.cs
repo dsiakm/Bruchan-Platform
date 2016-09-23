@@ -10,8 +10,9 @@ public class CameraFollow : MonoBehaviour {
 
 	public float distance = 10.0f;
 
-	void Awake(){
+	void Start(){
 		camTransform = transform;
+		lookAt = PlayerState.playerState.transform;
 		cam = Camera.main;
 
 	}

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class StageState : MonoBehaviour {
 
@@ -10,6 +11,8 @@ public class StageState : MonoBehaviour {
 
 	public Vector2 checkPoint;
 
+	public List<bool> CPList = new List<bool>();
+
 	void Awake () {
 		if (stageState == null) {
 			DontDestroyOnLoad (gameObject);	
@@ -17,6 +20,11 @@ public class StageState : MonoBehaviour {
 		} else if (stageState != this) {
 			Destroy (gameObject);
 		}
+
+		for (int i = 0; i<10;i++){
+			CPList.Add (false);
+		}
+
 		checkPoint = new Vector2 (-6,11);
 		stageName = "NewTestScenario";
 	}

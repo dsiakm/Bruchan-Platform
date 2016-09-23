@@ -2,7 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerMovementImproved.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player/PlayerMovementImproved.cs" Line="159" Column="49" />
+      <File FileName="Assets/Scripts/Player/PlayerMovementImproved.cs" Line="74" Column="48" />
+      <File FileName="Assets/CameraFollow.cs" Line="15" Column="46" />
+      <File FileName="Assets/Scripts/GameWorld/DestroyIfPastCheckPoint.cs" Line="11" Column="19" />
+      <File FileName="Assets/Scripts/GameWorld/CheckPoint.cs" Line="18" Column="51" />
+      <File FileName="Assets/Scripts/GameControl/StageState.cs" Line="25" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

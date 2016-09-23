@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PlayerMovementImproved : MonoBehaviour {
 
+	[SerializeField]
+	public bool isOnGroundShow, isWallLeftShow, isWallRightShow;
+
 	//NEW//
 	bool isOnGround(){
 
@@ -21,17 +24,34 @@ public class PlayerMovementImproved : MonoBehaviour {
 	}
 	bool isWallOnLeft(){
 
-		float lengthToSearch = 1f;
+		float lengthToSearch = 0.5f;
 		float colliderThreshold = 0.01f;
 		Renderer renderer = GetComponent<Renderer> ();
 		 
 		Vector2 linestart = new Vector2 (this.transform.position.x - renderer.bounds.extents.x - colliderThreshold, this.transform.position.y);
 		Vector2 vectorToSearch = new Vector2 (linestart.x - lengthToSearch, this.transform.position.y);
 
-		RaycastHit2D hitLeft = Physics2D.Linecast (linestart, vectorToSearch);
+		RaycastHit2D hitLeftMiddle = Physics2D.Linecast (linestart, vectorToSearch);
 
-		return hitLeft;
+		linestart = new Vector2 (this.transform.position.x - renderer.bounds.extents.x - colliderThreshold, this.transform.position.y-1.1f);
+		vectorToSearch = new Vector2 (linestart.x - lengthToSearch, this.transform.position.y-1.1f);
+
+		RaycastHit2D hitLeftBottom = Physics2D.Linecast (linestart, vectorToSearch);
+
+		linestart = new Vector2 (this.transform.position.x - renderer.bounds.extents.x - colliderThreshold, this.transform.position.y+0.6f);
+		vectorToSearch = new Vector2 (linestart.x - lengthToSearch, this.transform.position.y+0.6f);
+
+		RaycastHit2D hitLeftTop = Physics2D.Linecast (linestart, vectorToSearch);
+
+		if (hitLeftMiddle) {
+			return hitLeftMiddle;
+		} else if (hitLeftBottom) {
+			return hitLeftBottom;
+		} else {
+			return hitLeftTop;
+		}
 	}
+
 	bool isWallOnRight(){
 
 		float lengthToSearch = 0.5f;
@@ -41,9 +61,25 @@ public class PlayerMovementImproved : MonoBehaviour {
 		Vector2 linestart = new Vector2 (this.transform.position.x + renderer.bounds.extents.x + colliderThreshold, this.transform.position.y);
 		Vector2 vectorToSearch = new Vector2 (linestart.x + lengthToSearch, this.transform.position.y);
 
-		RaycastHit2D hitRight = Physics2D.Linecast (linestart, vectorToSearch);
+		RaycastHit2D hitRightMiddle = Physics2D.Linecast (linestart, vectorToSearch);
 
-		return hitRight;
+		linestart = new Vector2 (this.transform.position.x + renderer.bounds.extents.x + colliderThreshold, this.transform.position.y-1.1f);
+		vectorToSearch = new Vector2 (linestart.x + lengthToSearch, this.transform.position.y-1.1f);
+
+		RaycastHit2D hitRightBottom= Physics2D.Linecast (linestart, vectorToSearch);
+
+		linestart = new Vector2 (this.transform.position.x + renderer.bounds.extents.x + colliderThreshold, this.transform.position.y+0.6f);
+		vectorToSearch = new Vector2 (linestart.x + lengthToSearch, this.transform.position.y+0.6f);
+
+		RaycastHit2D hitRightTop= Physics2D.Linecast (linestart, vectorToSearch);
+
+		if (hitRightMiddle) {
+			return hitRightMiddle;
+		} else if (hitRightBottom) {
+			return hitRightBottom;
+		} else {
+			return hitRightTop;
+		}
 	}
 	//NEW//
 
@@ -71,6 +107,10 @@ public class PlayerMovementImproved : MonoBehaviour {
 		Dash ();
 		ResetCharges ();
 		HitJump ();
+
+		isOnGroundShow = isOnGround ();
+		isWallLeftShow = isWallOnLeft ();
+		isWallRightShow = isWallOnRight ();
 	}
 
 	void ResetCharges(){
