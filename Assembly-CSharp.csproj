@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Enemies\EnemyKeepAway.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyShot.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyState.cs" />
+     <Compile Include="Assets\Scripts\Enemies\ProjectileFaceHero.cs" />
      <Compile Include="Assets\Scripts\GUI\CameraFocus.cs" />
      <Compile Include="Assets\Scripts\GUI\HPBar.cs" />
      <Compile Include="Assets\Scripts\GUI\SPBar.cs" />
@@ -61,6 +62,7 @@
      <Compile Include="Assets\Scripts\GameControl\Platform.cs" />
      <Compile Include="Assets\Scripts\GameControl\StageState.cs" />
      <Compile Include="Assets\Scripts\GameControl\StaticTerrain.cs" />
+     <Compile Include="Assets\Scripts\GameWorld\Consumable.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />

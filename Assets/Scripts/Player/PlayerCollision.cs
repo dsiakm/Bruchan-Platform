@@ -19,7 +19,7 @@ public class PlayerCollision : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collided){
-
+		
 		if (PlayerState.playerState.IsInvulnerable()) {
 			return;
 		}
