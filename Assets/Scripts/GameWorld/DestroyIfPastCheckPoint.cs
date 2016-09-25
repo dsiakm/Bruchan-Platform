@@ -8,6 +8,9 @@ public class DestroyIfPastCheckPoint : MonoBehaviour {
 
 	void Start () {
 
+		if (StageState.stageState == null || StageState.stageState.CPList.Count == 0){
+			return;
+		}
 
 		if( StageState.stageState.CPList[CheckPoint] ){
 			Destroy (gameObject);
