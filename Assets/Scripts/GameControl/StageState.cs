@@ -18,19 +18,18 @@ public class StageState : MonoBehaviour {
 			DontDestroyOnLoad (gameObject);	
 			stageState = this;
 		} else if (stageState != this) {
+			Debug.Log ("Destroy");
 			Destroy (gameObject);
 		}
+	}
 
+	void Start () {
 		for (int i = 0; i<10;i++){
 			CPList.Add (false);
 		}
 
 		checkPoint = new Vector2 (-6,11);
 		stageName = "NewTestScenario";
-	}
-
-	void Start () {
-		
 	}
 	
 	public void PlayerDied(){

@@ -5,7 +5,7 @@ public class CheckPoint : MonoBehaviour {
 
 	public int CPNumber;
 
-	void Start(){
+	void Awake(){
 		if ( StageState.stageState.CPList[CPNumber] ){
 			Destroy (gameObject);
 		}

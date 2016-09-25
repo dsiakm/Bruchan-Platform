@@ -23,7 +23,9 @@ public class GameState : MonoBehaviour {
 		}else if (gameState != this){
 			Destroy (gameObject);
 		}
+	}
 
+	void Start(){
 		SetAllWeapons ();
 		SetAllSpells ();
 		SetAllItems ();

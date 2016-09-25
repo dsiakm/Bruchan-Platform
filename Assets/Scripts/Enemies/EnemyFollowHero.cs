@@ -5,6 +5,7 @@ public class EnemyFollowHero : MonoBehaviour {
 
 	Rigidbody2D rb2d;
 	Transform playerTransform;
+	Vector3 origin;
 	public bool isFlying;
 	public float minimumDistance;
 	public float boundLeft, boundRight;
@@ -13,6 +14,7 @@ public class EnemyFollowHero : MonoBehaviour {
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		playerTransform = PlayerState.playerState.transform;
+		origin = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -25,16 +27,22 @@ public class EnemyFollowHero : MonoBehaviour {
 			temp = transform.position.x - playerTransform.position.x;
 		} else
 			temp = 0;
-		if (temp > minimumDistance)
+		if (temp > minimumDistance) {
+			rb2d.velocity = Vector2.zero;
+			transform.position = Vector2.MoveTowards ( transform.position, origin, speed*Time.deltaTime);	
 			return;
+		}
 		if (transform.position.y < playerTransform.position.y) {
 			temp = playerTransform.position.y - transform.position.y;
 		} else if (transform.position.y >= playerTransform.position.y) {
 			temp = transform.position.y - playerTransform.position.y;
 		} else
 			temp = 0;
-		if (temp > minimumDistance)
+		if (temp > minimumDistance){
+			rb2d.velocity = Vector2.zero;
+			transform.position = Vector2.MoveTowards ( transform.position, origin, speed*Time.deltaTime);
 			return;
+		}
 
 		//Return in case is close to the bound
 		if(boundLeft >= rb2d.transform.position.x && boundLeft != 0){

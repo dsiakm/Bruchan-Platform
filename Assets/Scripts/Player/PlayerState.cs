@@ -14,6 +14,9 @@ public class PlayerState : MonoBehaviour {
 			Destroy (gameObject);
 		}
 
+	}
+
+	void Start(){
 		InitializeVariables ();
 	}
 
