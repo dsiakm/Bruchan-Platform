@@ -67,6 +67,8 @@
      <Compile Include="Assets\Scripts\GameWorld\CheckPoint.cs" />
      <Compile Include="Assets\Scripts\GameWorld\Consumable.cs" />
      <Compile Include="Assets\Scripts\GameWorld\DestroyIfPastCheckPoint.cs" />
+     <Compile Include="Assets\Scripts\GameWorld\FireSpell.cs" />
+     <Compile Include="Assets\Scripts\GameWorld\Switch.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
@@ -81,11 +83,21 @@
      <Compile Include="Assets\Scripts\Projectiles\SpinAroundSelf.cs" />
      <Compile Include="Assets\Scripts\Projectiles\basicSpellBehaviour.cs" />
      <Compile Include="Assets\Scripts\Projectiles\basicWeaponBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\fireSpellBehaviour.cs" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

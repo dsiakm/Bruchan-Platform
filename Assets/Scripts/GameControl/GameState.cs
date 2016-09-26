@@ -98,10 +98,10 @@ public class GameState : MonoBehaviour {
 		weaponsUnlockedList.Add (weaponName);
 	}
 	public void AddSpell(String spellName){
-		weaponsUnlockedList.Add (spellName);
+		spellsUnlockedList.Add (spellName);
 	}
 	public void AddItem(String itemName){
-		weaponsUnlockedList.Add (itemName);
+		itemsUnlockedList.Add (itemName);
 	}
 	public string CicleUnlockedWeapons(int side){
 		int index = weaponsUnlockedList.IndexOf(PlayerState.playerState.GetActiveWeapon())+side;

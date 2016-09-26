@@ -26,9 +26,9 @@ public class PlayerAttack : MonoBehaviour {
 	void Change(){
 		if(Input.GetButtonDown("ChangeWeapon")){
 			PlayerState.playerState.ChangeActiveWeapon (Input.GetAxis("ChangeWeapon"));
-		}else if(Input.GetButton("ChangeSpell")){
+		}else if(Input.GetButtonDown("ChangeSpell")){
 			PlayerState.playerState.ChangeActiveSpell (Input.GetAxis("ChangeSpell"));
-		}else if(Input.GetButton("ChangeItem")){
+		}else if(Input.GetButtonDown("ChangeItem")){
 			PlayerState.playerState.ChangeActiveItem (Input.GetAxis("ChangeItem"));
 		}
 	}

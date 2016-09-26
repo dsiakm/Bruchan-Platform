@@ -15,6 +15,7 @@ public class ShowCurrentSpell : MonoBehaviour {
 	void Update () {
 
 		string spell = PlayerState.playerState.GetActiveSpell();
+		Debug.Log (spell);
 
 		if (spell == "basicSpell"){
 			image.sprite = basicSpell;
