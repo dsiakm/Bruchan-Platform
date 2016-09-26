@@ -9,7 +9,7 @@ public class PlayerMovementImproved : MonoBehaviour {
 	//NEW//
 	bool isOnGround(){
 
-		float lengthToSearch = 1f;
+		float lengthToSearch = 0.01f;
 		float colliderThreshold = 0.001f;
 		Renderer renderer = GetComponent<Renderer> ();
 
@@ -17,14 +17,32 @@ public class PlayerMovementImproved : MonoBehaviour {
 
 		Vector2 vectorToSearch = new Vector2 (this.transform.position.x, linestart.y - lengthToSearch);
 
-		RaycastHit2D hit = Physics2D.Linecast (linestart, vectorToSearch);
+		RaycastHit2D hitMiddle = Physics2D.Linecast (linestart, vectorToSearch);
 
-		return hit;
+		linestart = new Vector2 (this.transform.position.x+0.5f, this.transform.position.y - renderer.bounds.extents.y - colliderThreshold);
+
+		vectorToSearch = new Vector2 (this.transform.position.x+0.5f, linestart.y - lengthToSearch);
+
+		RaycastHit2D hitRight = Physics2D.Linecast (linestart, vectorToSearch);
+
+		linestart = new Vector2 (this.transform.position.x-0.5f, this.transform.position.y - renderer.bounds.extents.y - colliderThreshold);
+
+		vectorToSearch = new Vector2 (this.transform.position.x-0.5f, linestart.y - lengthToSearch);
+
+		RaycastHit2D hitLeft = Physics2D.Linecast (linestart, vectorToSearch);
+
+		if (hitMiddle) {
+			return hitMiddle;
+		} else if (hitRight) {
+			return hitRight;
+		} else {
+			return hitLeft;
+		}
 
 	}
 	bool isWallOnLeft(){
 
-		float lengthToSearch = 0.5f;
+		float lengthToSearch = 0.01f;
 		float colliderThreshold = 0.01f;
 		Renderer renderer = GetComponent<Renderer> ();
 		 
@@ -54,7 +72,7 @@ public class PlayerMovementImproved : MonoBehaviour {
 
 	bool isWallOnRight(){
 
-		float lengthToSearch = 0.5f;
+		float lengthToSearch = 0.01f;
 		float colliderThreshold = 0.01f;
 		Renderer renderer = GetComponent<Renderer> ();
 
@@ -82,7 +100,6 @@ public class PlayerMovementImproved : MonoBehaviour {
 		}
 	}
 	//NEW//
-
 
 	//Internal Control
 	[SerializeField]
