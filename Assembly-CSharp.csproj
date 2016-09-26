@@ -55,6 +55,8 @@
      <Compile Include="Assets\Scripts\GUI\CameraFocus.cs" />
      <Compile Include="Assets\Scripts\GUI\HPBar.cs" />
      <Compile Include="Assets\Scripts\GUI\SPBar.cs" />
+     <Compile Include="Assets\Scripts\GUI\ShowCurrentMeele.cs" />
+     <Compile Include="Assets\Scripts\GUI\ShowCurrentSpell.cs" />
      <Compile Include="Assets\Scripts\GameControl\Damage.cs" />
      <Compile Include="Assets\Scripts\GameControl\FaultyTerrain.cs" />
      <Compile Include="Assets\Scripts\GameControl\GameState.cs" />

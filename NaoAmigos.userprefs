@@ -1,9 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameWorld/CheckPoint.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GUI/ShowCurrentSpell.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameWorld/DestroyIfPastCheckPoint.cs" Line="11" Column="39" />
-      <File FileName="Assets/Scripts/GameWorld/CheckPoint.cs" Line="8" Column="12" />
+      <File FileName="Assets/Scripts/GameWorld/DestroyIfPastCheckPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameWorld/CheckPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerMovementImproved.cs" Line="103" Column="2" />
+      <File FileName="Assets/Scripts/GUI/ShowCurrentMeele.cs" Line="7" Column="1" />
+      <File FileName="Assets/Scripts/GUI/ShowCurrentSpell.cs" Line="22" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
